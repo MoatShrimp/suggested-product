@@ -7,5 +7,5 @@ namespace Product.Api.Controllers;
 public class HelloController : ControllerBase
 {
   [HttpGet]
-  public string SayHello() => "Hello";
+  public string SayHello() => "Hello Frontend";
 }

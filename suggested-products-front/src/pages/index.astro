@@ -9,3 +9,12 @@ import Layout from '../layouts/Layout.astro';
 <Layout>
 	<Welcome />
 </Layout>
+
+<script>
+  fetch("http://localhost:5015/api/v1/Hello")
+    .then(result => result.text())
+    .then(text => console.log(
+      `%c ${text}`, "color:green;",
+      "Looks like the backend is available"))
+    .catch(() => console.error("Backend is either down or unavailable"))
+</script>
