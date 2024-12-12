@@ -1,10 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { getCollection, getEntry } from 'astro:content';
+
+const trialData = await getEntry('products', 'trial');
 ---
 
 <Layout>
   <main>
     <h1>Hello World</h1>
+    <p>{trialData?.data.name}</p>
   </main>
 </Layout>
 
