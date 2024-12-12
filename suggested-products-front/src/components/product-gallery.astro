@@ -13,8 +13,8 @@ const products = productsData.map(item => item.data);
 ---
 
 <section class="m-10 bg-slate-900 rounded-xl p-8">
-  <h2 class="text-4xl">{title}</h2>
-  <div class="flex">
+  <h2 class="text-4xl mb-6">{title}</h2>
+  <div class="flex flex-wrap gap-4">
     {products.map(product => <GalleryCard product={product}/>)}
   </div>
 </section>
