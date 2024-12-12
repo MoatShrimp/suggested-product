@@ -1,5 +1,5 @@
 import { defineCollection, z } from 'astro:content';
-import { glob, file } from 'astro/loaders';
+import { glob } from 'astro/loaders';
 
 const products = defineCollection({
   loader: glob({ 
@@ -7,6 +7,10 @@ const products = defineCollection({
     base: "./src/data/products" }),
   schema: z.object({
     name: z.string(),
+    description: z.string(),
+    price: z.string(),
+    id: z.string().uuid(),
+    imgSrc: z.string().url()
   }),
 });
 
